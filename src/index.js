@@ -354,8 +354,8 @@ class SortablePane extends Component {
               : {
                 scale: disableEffect ? 1 : spring(1, springConfig),
                 shadow: disableEffect ? 0 : spring(0, springConfig),
-                x: this.isHorizontal() ? springPosition : 0,
-                y: !this.isHorizontal() ? springPosition : 0,
+                x: this.isHorizontal() ? springPosition.val : 0,
+                y: !this.isHorizontal() ? springPosition.val : 0,
               };
       return (
         <Motion style={style} key={child.props.id}>
